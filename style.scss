@@ -1,0 +1,72 @@
+$colorsblue: rgb(60, 117, 198);
+$colorswhite: white;
+$contourcarte: 10px;
+$contourbuttum: 15px;
+$alignement: center;
+
+
+.card {
+    width: 200px;
+    height: 500px;
+    background-color: $colorsblue;
+    padding: $contourcarte;
+    display: block;
+    margin:auto;
+    animation-duration: 5s;
+    animation-name: glissement;
+    animation-direction:normal;
+        
+        &__title{
+            text-align: $alignement;
+            color: $colorswhite;
+        }
+
+            &__text{
+                display: block;
+                width: 200px;
+                    &--primary{
+                        font-weight: bold;
+                    }
+            }
+
+            &__photo{
+                border-radius: 50px;
+                margin: auto;
+                display: block;
+            }
+
+            &__button{
+                display:block;
+                margin: auto;
+                background-color: $colorswhite;
+                text-align: center;
+                padding: $contourcarte;
+                width: 150px;
+                
+                    div {
+                        height: 1px;
+                        display: block;
+                        background-color: red;
+                        width: 0%;
+                        transition: 1s;
+                    }
+            
+            }
+}
+@keyframes glissement {
+    from{
+        margin-left: 100%;
+        width: 200px;
+    }
+
+    to{
+        margin-left: 44%;
+        width: 200px;
+    }
+}
+
+button:hover>div{
+    width: 80%;
+    padding: $contourcarte;
+    
+}

@@ -1,0 +1,59 @@
+.card {
+  width: 200px;
+  height: 500px;
+  background-color: rgb(60, 117, 198);
+  padding: 10px;
+  display: block;
+  margin: auto;
+  animation-duration: 5s;
+  animation-name: glissement;
+  animation-direction: normal;
+}
+.card__title {
+  text-align: center;
+  color: white;
+}
+.card__text {
+  display: block;
+  width: 200px;
+}
+.card__text--primary {
+  font-weight: bold;
+}
+.card__photo {
+  border-radius: 50px;
+  margin: auto;
+  display: block;
+}
+.card__button {
+  display: block;
+  margin: auto;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  width: 150px;
+}
+.card__button div {
+  height: 1px;
+  display: block;
+  background-color: red;
+  width: 0%;
+  transition: 1s;
+}
+
+@keyframes glissement {
+  from {
+    margin-left: 100%;
+    width: 200px;
+  }
+  to {
+    margin-left: 44%;
+    width: 200px;
+  }
+}
+button:hover > div {
+  width: 80%;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
